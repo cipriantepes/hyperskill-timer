@@ -1,27 +1,20 @@
 {
-    "name": "JetBrains Academy Problem Timer",
+    "manifest_version": 2,
+    "name": "JetBrains Academy Timer",
     "version": "1.0.0",
-    "description": "Show a how long does it take you to complete a problem compared to the average",
+    "description": "Display a timer next to the average solving time so you have an idea where you stand.",
     "permissions": ["activeTab", "declarativeContent", "storage"],
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-    },
-    "options_page": "options.html",
-    "page_action": {
-        "default_popup": "popup.html",
+    "content_scripts": [{
+        "matches": ["https://*.hyperskill.org/learn/step/*"],
+        "css": ["hyperskill.css"],
+        "js": ["hyperskill.js"]
+    }],
+    "browser_action": {
         "default_icon": {
             "16": "images/get_started16.png",
             "32": "images/get_started32.png",
             "48": "images/get_started48.png",
             "128": "images/get_started128.png"
         }
-    },
-    "icons": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
-    },
-    "manifest_version": 2
+    }
 }
