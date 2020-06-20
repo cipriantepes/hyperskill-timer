@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "JetBrains Academy Timer",
     "version": "1.0.0",
-    "description": "Display a timer next to the average solving time so you have an idea where you stand.",
+    "description": "Display a timer next to the average solving time so you have an idea where you stand. You can pause or reset the timer. There is no data saved anywhere.",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "content_scripts": [{
         "matches": ["https://*.hyperskill.org/learn/step/*"],
@@ -11,10 +11,10 @@
     }],
     "browser_action": {
         "default_icon": {
-            "16": "images/get_started16.png",
-            "32": "images/get_started32.png",
-            "48": "images/get_started48.png",
-            "128": "images/get_started128.png"
+            "16": "images/hyperskill16.png",
+            "32": "images/hyperskill32.png",
+            "48": "images/hyperskill48.png",
+            "128": "images/hyperskill128.png"
         }
     }
 }
