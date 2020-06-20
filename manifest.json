@@ -2,10 +2,10 @@
     "manifest_version": 2,
     "name": "JetBrains Academy Timer",
     "version": "1.0.0",
-    "description": "Display a timer next to the average solving time so you have an idea where you stand. You can pause or reset the timer. There is no data saved anywhere.",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "description": "Display a timer next to the average solving time so you have an idea where you stand. You can pause or reset the timer.",
+    "permissions": ["activeTab"],
     "content_scripts": [{
-        "matches": ["https://*.hyperskill.org/learn/step/*"],
+        "matches": ["https://*.hyperskill.org/learn/step/*", "https://*.hyperskill.org/learn/daily/*"],
         "css": ["hyperskill.css"],
         "js": ["hyperskill.js"]
     }],
